@@ -41,7 +41,6 @@ export class EvmService {
   }
 
   async getBlockByNumber(height: string): Promise<GetBlockResponse> {
-    const hexHeight = '0x' + parseInt(height, 10).toString(16);
     const id = uuid();
     try {
       const { data: { result } } = await this.axios.post('', {
